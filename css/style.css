@@ -1,11 +1,46 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+}
+
 article {
 	width: 100%;
 	max-width: 960px;
 	margin: 0 auto;
 }
 
+p {
+	line-height: 1.3em;
+}
+
+button {
+	background: #E02D12;
+	border: none;
+	font-size: 1.4em;
+	padding: 0.8em;
+	color: #ffffff;
+	margin-right: 0.6em;
+}
+
+#ew-data {
+	background-color: #E06812;
+}
+
+#en-data {
+	background-color: #E09112;
+}
+
+#cr-data {
+	background-color: #E0CF12;
+}
+
 svg {
 	display: block;
-	margin: 3em auto;
-	background-color: black;
+	margin: 0 auto;
+}
+
+svg text {
+	color: red;
 }

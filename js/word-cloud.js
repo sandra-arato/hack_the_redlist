@@ -6,7 +6,7 @@ var tags = dataTags.cr;
 var test = function() {
 
     console.log('testinng');
-    var fill = d3.scale.category20b();
+    var fill = d3.scale.category20c();
 
     var w = window.innerWidth,
             h = window.innerHeight;
@@ -100,10 +100,14 @@ var test = function() {
 test();
 
  $('button').on('click', function(event){
-        console.log(event);
         
         $('svg').remove();
         tags = dataTags[event.currentTarget.id.split('-')[0]];
         console.log(event.currentTarget.id.split('-')[0]);
         test();
+
+        var text = $(event.currentTarget).attr('data-desc');
+
+        $('h2').html(text);
+
     })
