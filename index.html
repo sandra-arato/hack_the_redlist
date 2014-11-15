@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hack the Redlist</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<article role="main">
+		<section>
+			<h1>This is an intro to our work on Hacking the Redlist</h1>
+			<p>
+				Conservation scientists and ecologists are working with increasingly large data sets in the hope of tackling some of the most pressing issues in biodiversity monitoring and protection. Big data requires new and innovative solutions for analysis, visualisation and synthesis. It requires collaboration between scientists with large ecological datasets and professionals with the technical expertise to put those datasets to work. The conservation hackathon project aims to bring scientists and programmers together to generate exciting new solutions to emerging challenges in ecological and conservation research.
+			</p>
+			<p>
+				As a part of this work, on the Hackathon today we created the following word cloud that presents the most significant threats that CR species face in their environment.
+			</p>
+		</section>
+		<section>
+			<button id="cr-data">CR</button>
+			<button id="en-data">EN</button>
+			<button id="ew-data">EW</button>
+			<button id="ex-data">EX</button>
+		</section>
+		
+	</article>
+	<div id="vis"></div>
+       
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/d3.min.js"></script>
+	<script src="js/d3.layout.cloud.js"></script>
+	<script src="js/tags.js"></script>
+	 <script type="text/javascript" src="js/word-cloud.js"></script>
+</body>
+</html>

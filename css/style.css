@@ -1,0 +1,11 @@
+article {
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+svg {
+	display: block;
+	margin: 3em auto;
+	background-color: black;
+}
