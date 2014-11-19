@@ -4,17 +4,56 @@ body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 18px;
 }
+
+header {
+	padding-top: 2.3em;
+	padding-bottom: 1.6em;
+	background-color: #E02D12;
+}
+
 h3 {
 	font-weight: 400;
 }
-article {
+
+article, nav {
+	box-sizing: border-box;
 	width: 100%;
 	max-width: 960px;
 	margin: 0 auto;
 }
 
+nav a, a {
+	text-transform: uppercase;
+	font-size: 0.8em;
+	color: #000000;
+}
+
+nav a {
+	color: #ffffff;
+	margin-right: 2em;
+}
+
+nav a:hover {
+	color: #dddddd;
+}
+
+nav .share {
+	display: inline-block;
+	float: right;
+}
+
+nav i.fa {
+	font-size: 2em;
+}
+
 p {
 	line-height: 1.3em;
+}
+
+blockquote {
+	padding: 0.6em 0.8em;
+	background-color: #eeeeee;
+	margin-bottom: 2.2em;
 }
 
 button {
@@ -25,6 +64,7 @@ button {
 	color: #ffffff;
 	margin-right: 0.6em;
 }
+
 
 #ex-data {
 	background-color: #000000;
@@ -53,4 +93,18 @@ em {
 svg {
 	display: block;
 	margin: 0 auto;
+}
+
+.last {
+	margin-bottom: 4em;
+}
+
+@media (max-width:980px) {
+	article {
+		padding: 0 1.8em;
+	}
+
+	nav {
+		padding-left: 1.4em;
+	}
 }
