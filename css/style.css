@@ -1,10 +1,12 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700);
 
 body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 18px;
 }
-
+h3 {
+	font-weight: 400;
+}
 article {
 	width: 100%;
 	max-width: 960px;
@@ -24,23 +26,31 @@ button {
 	margin-right: 0.6em;
 }
 
-#ew-data {
-	background-color: #E06812;
+#ex-data {
+	background-color: #000000;
 }
 
-#en-data {
-	background-color: #E09112;
+#ew-data {
+	background-color: #999999;
 }
 
 #cr-data {
-	background-color: #E0CF12;
+	background-color: #E02D12;
+}
+
+#en-data {
+	background-color: #E06812;
+}
+
+#vu-data {
+	background-color: #E09112;
+}
+
+em {
+	font-weight: 700;
 }
 
 svg {
 	display: block;
 	margin: 0 auto;
-}
-
-svg text {
-	color: red;
 }

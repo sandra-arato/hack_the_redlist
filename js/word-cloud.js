@@ -2,10 +2,17 @@
 // http://julienrenaux.fr/2014/09/23/d3-js-responsive-word-cloud/
 var tags = dataTags.cr;
 
+var results = {
+    ex: "Scientists have found that extinctions often happen on <em>islands</em> when species such as <em>rats</em> (latin <em>Rattus</em>), <em>cats</em>, and <em>cattle</em> either <em>predate</em> on the local species or <em>compete</em> with them for <em>habitat</em>. The local species have nowhere else to go and so go <em>extinct</em>.",
+    en: "Our visualization suggests that threats to species in these categories are linked to <em>habitat</em> changes. One of the prime examples is <em>forest area loss due</em> to <em>deforestation</em> for <em>logging</em>, <em>plantations</em> or <em>mining</em>. However it also looks like animal <em>trade</em>, <em>poaching</em> and <em>hunting</em> are key factors.",
+    cr: "Our visualization suggests that threats to species in these categories are linked to <em>habitat</em> changes. One of the prime examples is <em>forest area loss due</em> to <em>deforestation</em> for <em>logging</em>, <em>plantations</em> or <em>mining</em>. However it also looks like animal <em>trade</em>, <em>poaching</em> and <em>hunting</em> are key factors.",
+    ew: "The data is not sufficient to come to a conclusion.",
+    vu: "TBD"
+}
 
-var test = function() {
 
-    console.log('testinng');
+var drawSvg = function() {
+
     var fill = d3.scale.category20c();
 
     var w = window.innerWidth,
@@ -97,17 +104,20 @@ var test = function() {
 
 };
 
-test();
+drawSvg();
 
  $('button').on('click', function(event){
         
         $('svg').remove();
-        tags = dataTags[event.currentTarget.id.split('-')[0]];
-        console.log(event.currentTarget.id.split('-')[0]);
-        test();
+        var tagId = event.currentTarget.id.split('-')[0]
+        tags = dataTags[tagId];
+        drawSvg();
 
         var text = $(event.currentTarget).attr('data-desc');
 
+
         $('h2').html(text);
+        console.log($.parseHTML(results[tagId]));
+        ($('h2 + p')).html('').append($.parseHTML(results[tagId]));
 
     })
