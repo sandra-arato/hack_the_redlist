@@ -4,19 +4,36 @@
 	<title>Hack the Redlist</title>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+	<header>
+		<nav>
+			<a href="http://www.iucnredlist.org/">IUCN Redlist</a>
+			<a href="http://conservationhackathon.org/">Conservation Hackathon</a>
+			<div class="share">
+				<a href="https://www.facebook.com/sharer/sharer.php?u=http://sandraszenti.github.io/hack_the_redlist/"><i class="fa fa-facebook-square"></i></a>
+				<a href="http://twitter.com/share?text=Hack the Redlist!&amp;url=http://sandraszenti.github.io/hack_the_redlist/&amp;hashtags=redlist"><i class="fa fa-twitter-square"></i></a>
+				<a href="https://plus.google.com/share?url=http%3A%2F%2Fsandraszenti.github.io/hack_the_redlist/"><i class="fa fa-google-plus-square"></i></a>
+			</div>
+			
+		</nav>	
+	</header>
 	<article role="main">
 		<section>
 			<h1>Hacking the Redlist</h1>
-			<h3>Data visualisation project by <a href="http://www.ceh.ac.uk/staffwebpages/tom-august.html">Tom August</a> and Sandra Szenti</h3>
-			<p>
-				Conservation scientists and ecologists are working with increasingly large data sets in the hope of tackling some of the most pressing issues in biodiversity monitoring and protection. Big data requires new and innovative solutions for analysis, visualisation and synthesis. It requires collaboration between scientists with large ecological datasets and professionals with the technical expertise to put those datasets to work. The conservation hackathon project aims to bring scientists and programmers together to generate exciting new solutions to emerging challenges in ecological and conservation research.
-			</p>
+			<h3>Data visualisation project by <a href="http://www.ceh.ac.uk/staffwebpages/tom-august.html">Tom August</a> and <a href="http://sandraszenti.github.io/me/">Sandra Szenti</a></h3>
+			<blockquote cite="http://conservationhackathon.org/">
+				"Conservation scientists and ecologists are working with increasingly large data sets in the hope of tackling some of the most pressing issues in biodiversity monitoring and protection. Big data requires new and innovative solutions for analysis, visualisation and synthesis. It requires collaboration between scientists with large ecological datasets and professionals with the technical expertise to put those datasets to work."
+				<footer>— <a href="http://conservationhackathon.org/">Conservation Hackathon</a></footer>
+			</blockquote>
 			<h3>Threat Categories affecting species</h3>
 			<p>
-				As a part of this work, on the Hackathon today we created the following word cloud that presents the most significant threats that CR species face in their environment.
+				As a part of the <a href="http://conservationhackathon.org/hack-the-redlist-at-london-zoo/">Hack The Redlist</a> hackathon, we worked together to create a visualisation of the threats that species face based on their endangerment level.
+			</p>
+			<p>
+				These visualizations tell an interesting tale about the threats that face some of the most threatened species on our planet, as well as those for whom time has already run out. The results back up commonly held beliefs as to what makes species vulnerable to extinction.
 			</p>
 		</section>
 		<section>
@@ -26,12 +43,42 @@
 			<button id="ew-data" data-desc="extinct in the wild">EW</button>
 			<button id="ex-data" data-desc="extinct">EX</button>
 			<h2>vulnerable</h2>
-			<p>TBD</p>
+			<p>
+				Our visualization suggests that threats to species in these categories are linked to <em>habitat</em> changes. One of the prime examples is <em>forest area loss due</em> to <em>deforestation</em> for <em>logging</em>, <em>plantations</em> or <em>mining</em>. However it also looks like animal <em>trade</em>, <em>poaching</em> and <em>hunting</em> are key factors.
+			</p>
 		</section>
 		
 	</article>
 	<div id="vis"></div>
-       
+    <article class="last">
+    	<section>
+    		<h3>Project Summary</h3>
+    		<p>
+    			The data that we used is located in the public repo's <a href="https://github.com/sandraszenti/hack_the_redlist/tree/master/data">data</a> folder. Tom used the data from threat.json to create a scaled list of the most frequent words in thread_txt by category. The R script for the filtering is available in this same folder. Then based on the exported csvs, Sandra turned those back to a JS object and used a publicly available <a href="https://github.com/shprink/d3js-wordcloud">wordcloud project</a> to display them on this website.
+    		</p>
+    		<p>
+    			After the hackathon, we added some explanatory text to the results and a bit more context to the project as well as styling that makes the project a bit more friendlier to anyone who visits the page. Sandra also included some sharing options.
+    		</p>
+    		<p>
+    			Some of the enhancements we thought this project would benefit from:
+    			<ul>
+    				<li>
+    					It would be great to color the words in the same as the buttons at the top (or shades of that colour)
+    				</li>
+    				<li>
+    					It would be great to have a cool transition when moving from one category to another, perhaps similar to the animation you get when re-sizing the window
+    				</li>
+    				<li>
+    					Shape the word cloud according to the letters of the classification or in the silhouette of an animal in that category.
+    				</li>
+    			</ul>
+    		</p>
+    		<p>
+    			If you'd like to help out, send a pull request for these changes, or fork the project to come up with something even more useful and fun!
+    		</p>
+    	</section>
+
+    </article>
 	<script src="js/jquery-2.1.1.min.js"></script>
 	<script src="js/d3.min.js"></script>
 	<script src="js/d3.layout.cloud.js"></script>
